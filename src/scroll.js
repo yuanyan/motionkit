@@ -76,7 +76,7 @@
                     startLeft * (1 - i) + destinationLeft * i,
                     startTop * (1 - i) + destinationTop * i
             )
-        }, getFirstNumber(duration, 600))
+        }, getFirstNumber(duration, 300))
     };
 
     global.smoothScrollBy = function(destination, duration){
@@ -100,6 +100,6 @@
                 destinationLeft * diffStep,
                 destinationTop * diffStep
             )
-        }, getFirstNumber(duration, 600))
+        }, getFirstNumber(duration, 300))
     }
 })(this);
