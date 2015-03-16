@@ -108,6 +108,7 @@
     <li>Tellus blandit eu sed nec, sit elit, metus non felis euismod mauris rhoncus sed, lacus sed lacus ut cursus maecenas, lacus ante libero. Duis elit aenean in. Consequat quis tincidunt nulla orci, mus in, lobortis praesent consectetuer conubia, erat non, porro erat tempor parturient id. Integer dui, praesent quam non cras, a ac ad, vivamus sodales interdum, a semper et. Dignissim tortor turpis blandit cras, mauris curabitur elit neque sed ut, quam ipsum, luctus pede tellus. Justo nunc, vitae lorem elit. Bibendum donec volutpat a posuere, dapibus mauris quis tincidunt magnis sociis ac<br><br></li>
 </ul>
 <script src="../src/scroll.js"></script>
+<script src="../src/zoom.js"></script>
 <script>
     __startMotion = true;
     __debugMotion = true;
@@ -118,7 +119,15 @@
 
         console.log(direction)
 
-        if(evt.direction == 'up'){
+        if(direction == 'left'){
+            zoom.to({
+                x: 100,
+                y: 200,
+                scale: 3
+            })
+        }else if(direction == 'right'){
+            zoom.out()
+        }else if(evt.direction == 'up'){
             smoothScrollBy(-400)
         }else if(evt.direction == 'down'){
             smoothScrollBy(400)
